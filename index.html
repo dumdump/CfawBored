@@ -12,6 +12,7 @@
   </head>
   <body>
     <h1 id="top-heading">Bored?</h1>
+    <input id = "password" type = "text">
     <script>
       var topHeadingEl = document.getElementById("top-heading")
       topHeadingEl.style.opacity = 0;
@@ -24,6 +25,8 @@
           window.requestAnimationFrame(makeVisible);
         };
       };
+      var passwordInput = document.getElementById("password");
+      
       makeVisible();
     </script>
   </body>
