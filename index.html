@@ -3,10 +3,27 @@
   <head>
     <title>Bored at Cfaw</title>
     <style>
+      #top-heading {
+        text-align: center;
+        font-family: Georgia, serif;
+        font-size: 0px;
+      }
     </style>  
   </head>
   <body>
+    <h1 id="top-heading">Bored?</h1>
     <script>
+      var topHeadingEl = document.getElementById("top-heading")
+      topHeadingEl.style.opacity = 0;
+      var startTime = new Date().getTime();
+      var makeVisible = function() {
+        var currTime = new Date().getTime();
+        var newOpacity = (0+((currTime - startTime)/1000) * 30);
+        topHeadingEl.style.opacity = newOpacity;
+        if (newOpacity < 1) {
+          window.requestAnimationFrame(makeVisible);
+        };
+      };
     </script>
   </body>
 </html>
