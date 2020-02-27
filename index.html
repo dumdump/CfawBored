@@ -18,7 +18,7 @@
       var startTime = new Date().getTime();
       var makeVisible = function() {
         var currTime = new Date().getTime();
-        var newOpacity = (0 + ((currTime - startTime)/10000) * 30);
+        var newOpacity = (0 + ((currTime - startTime)/100000) * 30);
         topHeadingEl.style.opacity = newOpacity;
         if (newOpacity < 1) {
           window.requestAnimationFrame(makeVisible);
